@@ -8,8 +8,19 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  
-})
+  name: "BaseButton",
+  emits: {
+    click: null,
+  },
+  setup(_, { emit }) {
+    const handleClick = () => {
+      emit("click");
+    };
+    return {
+      handleClick,
+    };
+  },
+});
 </script>
 
 <style>
