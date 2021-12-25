@@ -27,9 +27,10 @@ export default defineComponent({
       emit("click");
     };
     
-    const buttonClass = computed(() => {
+    console.log(props.disabled)
+    const buttonClass = computed(() => 
       props.disabled ? 'text-gray-400 bg-gray-100' : 'text-white bg-gray-800'
-    });
+    );
 
     return {
       handleClick,
